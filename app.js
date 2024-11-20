@@ -9,6 +9,7 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 app.use("/", indexRouter);
 
+const PORT = process.env.PORT || 4000;
 app.listen(3000, () => {
-  console.log("Listening on port 3000!");
+  console.log(`Listening on port ${PORT}`);
 });
